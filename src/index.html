@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JSUA Example</title>
+    <script src="fetch-polyfill.js" charset="utf-8"></script>
+    <script src="bundle.js" charset="utf-8"></script>
+    <script src="config.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div id="content">
+      <span>Loading...</span>
+    </div>
+    <script type="text/javascript">
+      var jsua = require("jsua");
+      
+      if (document.location.hash) {
+        let url = new URL(document.location.hash.substr(1), document.location.origin);
+        jsua.fetch(url.toString());
+      } else {
+        jsua.fetch(document.location.protocol + "/content-samples/text.lnx");  
+      }
+    </script>
+  </body>
+</html>

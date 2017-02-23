@@ -1,0 +1,37 @@
+{
+  "name": "jsua-example",
+  "version": "0.1.0",
+  "description": "An example of how to use lynx-json/jsua to build an app.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf out; mkdir out",
+    "build": "npm run clean; babel node_modules/lynx-parser/src -d node_modules/lynx-parser/lib; babel node_modules/jsua-lynx/src -d node_modules/jsua-lynx/lib; babel node_modules/jsua/src -d node_modules/jsua/lib; browserify -r babel-polyfill -r jsua -r jsua/lib/views -r jsua-lynx -o ./out/bundle.js; cp -R ./src/* ./out",
+    "start": "npm run build; node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danmork/jsua-example.git"
+  },
+  "keywords": [
+    "jsua",
+    "jsua-lynx"
+  ],
+  "author": "Dan Mork",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danmork/jsua-example/issues"
+  },
+  "homepage": "https://github.com/danmork/jsua-example#readme",
+  "dependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-plugin-transform-async-to-generator": "^6.8.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-register": "^6.11.6",
+    "express": "^4.14.1",
+    "jsua": "github:lynx-json/jsua",
+    "jsua-lynx": "github:lynx-json/jsua-lynx",
+    "lynx-parser": "github:johnhowes/lynx-parser"
+  }
+}

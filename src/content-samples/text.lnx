@@ -1,0 +1,6 @@
+{
+  "spec": {
+    "hints": [ "text" ]
+  },
+  "value": "Hello, World! (application/lynx+json)"
+}
