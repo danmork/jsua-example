@@ -32,6 +32,6 @@
     "express": "^4.14.1",
     "jsua": "github:lynx-json/jsua",
     "jsua-lynx": "github:lynx-json/jsua-lynx",
-    "lynx-parser": "github:johnhowes/lynx-parser"
+    "lynx-parser": "github:lynx-json/lynx-parser"
   }
 }
