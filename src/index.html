@@ -13,13 +13,15 @@
     </div>
     <script type="text/javascript">
       var jsua = require("jsua");
-      let url = "/content-samples/text.lnx";
+
+      var url = "/content-samples/text.lnx";
       if (document.location.hash) {
         url = document.location.hash.substr(1);
       }
-      
-      url = new URL(url, document.location.origin);
-      jsua.fetch(url.toString());
+
+      url = document.location.origin + url;
+
+      jsua.fetch(url);
     </script>
   </body>
 </html>
