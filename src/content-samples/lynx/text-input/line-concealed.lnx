@@ -1,0 +1,10 @@
+{
+  "spec": {
+    "visibility": "concealed",
+    "hints": [ "line", "text" ],
+    "input": {
+      "name": "greeting"
+    }
+  },
+  "value": "Concealed Line Input"
+}
