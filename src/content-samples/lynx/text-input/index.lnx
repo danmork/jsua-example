@@ -1,0 +1,28 @@
+{
+  "spec": {
+    "hints": [ "container" ],
+    "children": {
+      "hints": [ "link" ],
+      "children": [
+        { "name": "label", "hints": [ "text" ] }
+      ]
+    }
+  },
+  "value": [
+    {
+      "label": "Text Input Example",
+      "href": "./text.lnx",
+      "type": "application/lynx+json"
+    },
+    {
+      "label": "Line Input Example",
+      "href": "./line.lnx",
+      "type": "application/lynx+json"
+    },
+    {
+      "label": "Line (Concealed) Input Example",
+      "href": "./line.lnx",
+      "type": "application/lynx+json"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "spec": {
+    "hints": [ "container" ],
+    "children": {
+      "hints": [ "text" ]
+    }
+  },
+  "value": [
+    "First array item",
+    "Second array item",
+    "Third array item"
+  ]
+}

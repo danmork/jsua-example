@@ -1,0 +1,23 @@
+{
+  "spec": {
+    "hints": [ "container" ],
+    "children": {
+      "hints": [ "link" ],
+      "children": [
+        { "name": "label", "hints": [ "text" ] }
+      ]
+    }
+  },
+  "value": [
+    {
+      "label": "Object With Text Properties Example",
+      "href": "./object-with-text-properties.lnx",
+      "type": "application/lynx+json"
+    },
+    {
+      "label": "Array Of Text Example",
+      "href": "./array-of-text.lnx",
+      "type": "application/lynx+json"
+    }
+  ]
+}
