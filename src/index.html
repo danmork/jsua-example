@@ -25,6 +25,21 @@
       }
       
       var jsua = require("jsua");
+      var views = require("jsua/lib/views");
+      
+      views.finishing.register("lynx.link.behavior", function (result) {
+        if (result.content.blob.type.indexOf("application/lynx+json") === -1) return;
+        
+        var linkViews = result.view.querySelectorAll("[data-lynx-hints~=link]");
+        linkViews = Array.prototype.slice.call(linkViews);
+        linkViews.forEach(function (linkView) {
+          linkView.addEventListener("click", function (evt) {
+            evt.preventDefault();
+            evt.stopPropagation();
+            jsua.fetch(linkView.href);
+          });
+        });
+      });
       
       window.addEventListener("hashchange", function () {
         jsua.fetch(document.location.origin + getCurrentLocation());

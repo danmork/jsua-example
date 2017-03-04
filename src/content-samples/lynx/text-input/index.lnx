@@ -21,7 +21,7 @@
     },
     {
       "label": "Line (Concealed) Input Example",
-      "href": "./line.lnx",
+      "href": "./line-concealed.lnx",
       "type": "application/lynx+json"
     }
   ]

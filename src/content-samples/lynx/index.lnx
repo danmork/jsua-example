@@ -18,6 +18,11 @@
       "label": "Text Input Examples",
       "href": "./text-input/",
       "type": "application/lynx+json"
+    },
+    {
+      "label": "Container Examples",
+      "href": "./container/",
+      "type": "application/lynx+json"
     }
   ]
 }
