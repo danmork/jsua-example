@@ -1,0 +1,13 @@
+{
+  "spec": {
+    "hints": [ "submit" ],
+    "children": [
+      { "name": "label", "hints": [ "text" ] }
+    ]
+  },
+  "value": {
+    "label": "This is a submit. Click to go back.",
+    "action": "./index.lnx",
+    "type": "application/lynx+json"
+  }
+}

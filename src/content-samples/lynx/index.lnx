@@ -23,6 +23,16 @@
       "label": "Container Examples",
       "href": "./container/",
       "type": "application/lynx+json"
+    },
+    {
+      "label": "Link Example",
+      "href": "./link.lnx",
+      "type": "application/lynx+json"
+    },
+    {
+      "label": "Submit Example",
+      "href": "./submit.lnx",
+      "type": "application/lynx+json"
     }
   ]
 }

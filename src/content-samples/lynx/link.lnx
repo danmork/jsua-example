@@ -1,0 +1,13 @@
+{
+  "spec": {
+    "hints": [ "link" ],
+    "children": [
+      { "name": "label", "hints": [ "text" ] }
+    ]
+  },
+  "value": {
+    "label": "This is a link. Click to go back.",
+    "href": "./index.lnx",
+    "type": "application/lynx+json"
+  }
+}

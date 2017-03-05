@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>JSUA Example</title>
     <script src="fetch-polyfill.js" charset="utf-8"></script>
+    <script src="matches-polyfill.js" charset="utf-8"></script>
     <script src="bundle.js" charset="utf-8"></script>
     <script src="config.js" charset="utf-8"></script>
   </head>
@@ -25,21 +26,6 @@
       }
       
       var jsua = require("jsua");
-      var views = require("jsua/lib/views");
-      
-      views.finishing.register("lynx.link.behavior", function (result) {
-        if (result.content.blob.type.indexOf("application/lynx+json") === -1) return;
-        
-        var linkViews = result.view.querySelectorAll("[data-lynx-hints~=link]");
-        linkViews = Array.prototype.slice.call(linkViews);
-        linkViews.forEach(function (linkView) {
-          linkView.addEventListener("click", function (evt) {
-            evt.preventDefault();
-            evt.stopPropagation();
-            jsua.fetch(linkView.href);
-          });
-        });
-      });
       
       window.addEventListener("hashchange", function () {
         jsua.fetch(document.location.origin + getCurrentLocation());
