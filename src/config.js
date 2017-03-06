@@ -48,6 +48,18 @@ function selectUp(view, selector) {
   return matches;
 }
 
+function nearestUp(view, selector) {
+  var contentContainer = document.querySelector("#content");
+  var currentView = view;
+  
+  while (currentView !== contentContainer) {
+    if (currentView.matches(selector)) return currentView;
+    currentView = currentView.parentElement;
+  }
+  
+  return null;
+}
+
 function lynxLinkClickBehavior(result) {
   if (result.content.blob.type.indexOf("application/lynx+json") === -1) return;
   
@@ -71,11 +83,42 @@ function lynxSubmitClickBehavior(result) {
     submitView.addEventListener("click", function (evt) {
       evt.preventDefault();
       evt.stopPropagation();
+      
+      var formAction = submitView.formAction;
       var options = {};
-      // TODO: build FormData object
+      
+      var form = nearestUp(submitView, "[data-lynx-hints~=form]");
+      
+      if (form) {
+        var formData;
+        
+        if (submitView.formEnctype === "multipart/form-data") {
+          formData = new FormData();
+        } else {
+          formData = new URLSearchParams();
+        }
+        
+        selectDown(form, "[data-lynx-input=true]").forEach(function (inputView) {
+          // TODO: container inputs
+          // TODO: content inputs
+          if (inputView.matches("[data-lynx-hints~=text]")) {
+            formData.append(inputView.name, inputView.value);
+          }
+        });
+        
+        if (submitView.formMethod === "POST" || submitView.formMethod === "PUT") {
+          options.body = formData;
+        } else {
+          var temp = document.createElement("a");
+          temp.href = formAction;
+          temp.search = formData.toString();
+          formAction = temp.href;
+        }
+      }
+      
       if (submitView.formMethod) options.method = submitView.formMethod;
       if (submitView.formEnctype) options.enctype = submitView.formEnctype;
-      jsua.fetch(submitView.formAction, options);
+      jsua.fetch(formAction, options);
     });
   });
 }

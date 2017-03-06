@@ -25,6 +25,11 @@
       "type": "application/lynx+json"
     },
     {
+      "label": "Form Example",
+      "href": "./form.lnx",
+      "type": "application/lynx+json"
+    },
+    {
       "label": "Link Example",
       "href": "./link.lnx",
       "type": "application/lynx+json"
