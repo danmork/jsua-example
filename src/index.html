@@ -5,6 +5,7 @@
     <title>JSUA Example</title>
     <script src="fetch-polyfill.js" charset="utf-8"></script>
     <script src="matches-polyfill.js" charset="utf-8"></script>
+    <script src="url-search-params-polyfill.js" charset="utf-8"></script>
     <script src="bundle.js" charset="utf-8"></script>
     <script src="config.js" charset="utf-8"></script>
   </head>
@@ -22,7 +23,7 @@
           return getCurrentLocation();
         }
 
-        return "/content-samples/lynx/text.lnx";
+        return "/content-samples/";
       }
       
       var jsua = require("jsua");
