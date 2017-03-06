@@ -85,6 +85,7 @@ function lynxSubmitClickBehavior(result) {
       evt.stopPropagation();
       
       var formAction = submitView.formAction;
+      var formMethod = submitView.formMethod && submitView.formMethod.toUpperCase() || "GET";
       var options = {};
       
       var form = nearestUp(submitView, "[data-lynx-hints~=form]");
@@ -106,7 +107,7 @@ function lynxSubmitClickBehavior(result) {
           }
         });
         
-        if (submitView.formMethod === "POST" || submitView.formMethod === "PUT") {
+        if (formMethod === "POST" || formMethod === "PUT") {
           options.body = formData;
         } else {
           var temp = document.createElement("a");

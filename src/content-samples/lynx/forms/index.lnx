@@ -1,0 +1,28 @@
+{
+  "spec": {
+    "hints": [ "container" ],
+    "children": {
+      "hints": [ "link" ],
+      "children": [
+        { "name": "label", "hints": [ "text" ] }
+      ]
+    }
+  },
+  "value": [
+    {
+      "label": "Form Example with GET and application/x-www-form-urlencoded",
+      "href": "./get-url-enc.lnx",
+      "type": "application/lynx+json"
+    },
+    {
+      "label": "Form Example with POST and application/x-www-form-urlencoded",
+      "href": "./post-url-enc.lnx",
+      "type": "application/lynx+json"
+    },
+    {
+      "label": "Form Example with POST and multipart/form-data",
+      "href": "./post-multipart-enc.lnx",
+      "type": "application/lynx+json"
+    }
+  ]
+}

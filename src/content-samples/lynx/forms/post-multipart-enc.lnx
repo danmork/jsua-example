@@ -1,0 +1,38 @@
+{
+  "spec": {
+    "hints": [ "form" ],
+    "children": [
+      {
+        "name": "label",
+        "hints": [ "label", "text" ]
+      },
+      {
+        "name": "firstName",
+        "hints": [ "line", "text" ],
+        "input": {
+          "name": "firstName"
+        }
+      },
+      {
+        "name": "submit",
+        "hints": [ "submit" ],
+        "children": [
+          {
+            "name": "label",
+            "hints": [ "label", "text" ]
+          }
+        ]
+      }
+    ]
+  },
+  "value": {
+    "label": "First name",
+    "firstName": "",
+    "submit": {
+      "label": "Submit",
+      "action": "/echo",
+      "method": "POST",
+      "enctype": "multipart/form-data"
+    }
+  }
+}
