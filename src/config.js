@@ -11,11 +11,11 @@ function isAttached(view) {
 function rootAttacher(result) {
   var contentContainer = document.querySelector("#content");
   if (!contentContainer) return;
-  
+
   while (contentContainer.firstElementChild) {
     contentContainer.removeChild(contentContainer.firstElementChild);
   }
-  
+
   contentContainer.appendChild(result.view);
 }
 
@@ -39,32 +39,32 @@ function selectUp(view, selector) {
   var contentContainer = document.querySelector("#content");
   var currentView = view;
   var matches = [];
-  
+
   while (currentView !== contentContainer) {
     if (currentView.matches(selector)) matches.push(currentView);
     currentView = currentView.parentElement;
   }
-  
+
   return matches;
 }
 
 function nearestUp(view, selector) {
   var contentContainer = document.querySelector("#content");
   var currentView = view;
-  
+
   while (currentView !== contentContainer) {
     if (currentView.matches(selector)) return currentView;
     currentView = currentView.parentElement;
   }
-  
+
   return null;
 }
 
 function lynxLinkClickBehavior(result) {
   if (result.content.blob.type.indexOf("application/lynx+json") === -1) return;
-  
+
   var linkViews = selectDown(result.view, "[data-lynx-hints~=link]");
-  
+
   linkViews.forEach(function (linkView) {
     linkView.addEventListener("click", function (evt) {
       evt.preventDefault();
@@ -76,29 +76,32 @@ function lynxLinkClickBehavior(result) {
 
 function lynxSubmitClickBehavior(result) {
   if (result.content.blob.type.indexOf("application/lynx+json") === -1) return;
-  
+
   var submitViews = selectDown(result.view, "[data-lynx-hints~=submit]");
-  
+
   submitViews.forEach(function (submitView) {
     submitView.addEventListener("click", function (evt) {
       evt.preventDefault();
       evt.stopPropagation();
-      
+
       var formAction = submitView.formAction;
       var formMethod = submitView.formMethod && submitView.formMethod.toUpperCase() || "GET";
-      var options = {};
-      
+      var formEnctype = submitView.formEnctype || "application/x-www-form-urlencoded";
+      var options = {
+        method: formMethod
+      };
+
       var form = nearestUp(submitView, "[data-lynx-hints~=form]");
-      
+
       if (form) {
         var formData;
-        
-        if (submitView.formEnctype === "multipart/form-data") {
+
+        if (formEnctype === "multipart/form-data") {
           formData = new FormData();
         } else {
           formData = new URLSearchParams();
         }
-        
+
         selectDown(form, "[data-lynx-input=true]").forEach(function (inputView) {
           // TODO: container inputs
           // TODO: content inputs
@@ -106,7 +109,7 @@ function lynxSubmitClickBehavior(result) {
             formData.append(inputView.name, inputView.value);
           }
         });
-        
+
         if (formMethod === "POST" || formMethod === "PUT") {
           options.body = formData;
         } else {
@@ -116,9 +119,7 @@ function lynxSubmitClickBehavior(result) {
           formAction = temp.href;
         }
       }
-      
-      if (submitView.formMethod) options.method = submitView.formMethod;
-      if (submitView.formEnctype) options.enctype = submitView.formEnctype;
+
       jsua.fetch(formAction, options);
     });
   });

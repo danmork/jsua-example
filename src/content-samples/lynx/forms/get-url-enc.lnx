@@ -30,7 +30,7 @@
     "firstName": "",
     "submit": {
       "label": "Submit",
-      "action": "./index.lnx"
+      "action": "/echo"
     }
   }
 }
