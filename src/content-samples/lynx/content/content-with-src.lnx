@@ -1,0 +1,10 @@
+{
+  "spec": {
+    "hints": [ "content" ]
+  },
+  "value": {
+    "src": "./embedded.txt",
+    "type": "text/plain",
+    "alt": "A simple plain text file"
+  }
+}

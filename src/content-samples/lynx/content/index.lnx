@@ -1,0 +1,23 @@
+{
+  "spec": {
+    "hints": [ "container" ],
+    "children": {
+      "hints": [ "link" ],
+      "children": [
+        { "name": "label", "hints": [ "text" ] }
+      ]
+    }
+  },
+  "value": [
+    {
+      "label": "Content Example with 'src' Attribute",
+      "href": "./content-with-src.lnx",
+      "type": "application/lynx+json"
+    },
+    {
+      "label": "Content Example with 'data' Attribute",
+      "href": "./content-with-data.lnx",
+      "type": "application/lynx+json"
+    }
+  ]
+}

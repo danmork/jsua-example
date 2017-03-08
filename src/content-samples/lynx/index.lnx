@@ -30,6 +30,11 @@
       "type": "application/lynx+json"
     },
     {
+      "label": "Content Examples",
+      "href": "./content/",
+      "type": "application/lynx+json"
+    },
+    {
       "label": "Link Example",
       "href": "./link.lnx",
       "type": "application/lynx+json"

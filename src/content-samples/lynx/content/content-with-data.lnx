@@ -1,0 +1,10 @@
+{
+  "spec": {
+    "hints": [ "content" ]
+  },
+  "value": {
+    "data": "Embedded text/plain Content Using 'data' Attribute",
+    "type": "text/plain",
+    "alt": "A simple plain text file"
+  }
+}
