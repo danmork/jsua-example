@@ -1,0 +1,41 @@
+{
+  "spec": {
+    "hints": [ "form" ],
+    "children": [
+      {
+        "name": "label",
+        "hints": [ "label", "text" ]
+      },
+      {
+        "name": "fileUpload",
+        "hints": [ "content" ],
+        "input": {
+          "name": "fileUpload"
+        }
+      },
+      {
+        "name": "submit",
+        "hints": [ "submit" ],
+        "children": [
+          {
+            "name": "label",
+            "hints": [ "label", "text" ]
+          }
+        ]
+      }
+    ]
+  },
+  "value": {
+    "label": "File upload",
+    "fileUpload": {
+      "src": "./embedded.txt",
+      "type": "text/plain"
+    },
+    "submit": {
+      "label": "Submit",
+      "action": "/echo",
+      "method": "POST",
+      "enctype": "multipart/form-data"
+    }
+  }
+}

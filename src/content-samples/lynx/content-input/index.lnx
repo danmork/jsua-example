@@ -1,0 +1,23 @@
+{
+  "spec": {
+    "hints": [ "container" ],
+    "children": {
+      "hints": [ "link" ],
+      "children": [
+        { "name": "label", "hints": [ "text" ] }
+      ]
+    }
+  },
+  "value": [
+    {
+      "label": "Content Input Example with No Initial Value",
+      "href": "./content-input-with-no-initial-value.lnx",
+      "type": "application/lynx+json"
+    },
+    {
+      "label": "Content Input with Initial Value",
+      "href": "./content-input-with-initial-value.lnx",
+      "type": "application/lynx+json"
+    }
+  ]
+}

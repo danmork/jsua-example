@@ -152,9 +152,10 @@ function lynxSubmitClickBehavior(result) {
 
         selectDown(form, "[data-lynx-input=true]").forEach(function (inputView) {
           // TODO: container inputs
-          // TODO: content inputs
           if (inputView.matches("[data-lynx-hints~=text]")) {
             formData.append(inputView.name, inputView.value);
+          } else if (inputView.matches("[data-lynx-hints~=content]")) {
+            formData.append(inputView.name, inputView.getValue());
           }
         });
 

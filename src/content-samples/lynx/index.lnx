@@ -20,6 +20,11 @@
       "type": "application/lynx+json"
     },
     {
+      "label": "Content Input Examples",
+      "href": "./content-input/",
+      "type": "application/lynx+json"
+    },
+    {
       "label": "Container Examples",
       "href": "./container/",
       "type": "application/lynx+json"
