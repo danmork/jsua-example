@@ -1,0 +1,12 @@
+{
+  "spec": {
+    "hints": [ "image", "content" ]
+  },
+  "value": {
+    "src": "./bill-murray.jpg",
+    "type": "image/jpeg",
+    "alt": "One classy guy",
+    "height": 200,
+    "width": 200
+  }
+}

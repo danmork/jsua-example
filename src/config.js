@@ -24,6 +24,54 @@ function genericViewBuilder(content) {
     var view = document.createElement("object");
     view.data = content.url;
     view.type = content.blob.type;
+    view.setAttribute("data-content-url", content.url);
+    view.setAttribute("data-content-type", content.blob.type);
+    resolve(view);
+  });
+}
+
+function textViewBuilder(content) {
+  return new Promise(function (resolve, reject) {
+    var view = document.createElement("pre");
+    view.setAttribute("data-content-url", content.url);
+    view.setAttribute("data-content-type", content.blob.type);
+    
+    var reader = new FileReader();
+    
+    reader.onloadend = function (evt) {
+      view.textContent = evt.target.result;
+    };
+    
+    reader.readAsText(content.blob);
+    
+    resolve(view);
+  });
+}
+
+function imageViewBuilder(content) {
+  return new Promise(function (resolve, reject) {
+    var view = document.createElement("img");
+    view.setAttribute("data-content-url", content.url);
+    view.setAttribute("data-content-type", content.blob.type);
+    
+    if ("URL" in window && "createObjectURL" in URL && "revokeObjectURL" in URL) {
+      var src = URL.createObjectURL(content.blob);
+      
+      view.addEventListener("load", function () {
+        URL.revokeObjectURL(src);
+      });
+      
+      view.src = src;
+    } else {
+      var reader = new FileReader();
+      
+      reader.onloadend = function (evt) {
+        view.src = evt.target.result;
+      };
+      
+      reader.readAsDataURL(content.blob);
+    }
+    
     resolve(view);
   });
 }
@@ -128,6 +176,8 @@ function lynxSubmitClickBehavior(result) {
 views.attaching.setIsAttached(isAttached);
 views.attaching.register("root-attacher", rootAttacher);
 views.building.register("application/lynx+json", lynx.building.build);
+views.building.register("image/*", imageViewBuilder);
+views.building.register("text/*", textViewBuilder);
 views.building.register("*/*", genericViewBuilder);
 views.finishing.register("lynx.link.behavior", lynxLinkClickBehavior);
 views.finishing.register("lynx.submit.behavior", lynxSubmitClickBehavior);

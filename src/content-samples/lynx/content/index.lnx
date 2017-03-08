@@ -10,14 +10,19 @@
   },
   "value": [
     {
-      "label": "Content Example with 'src' Attribute",
-      "href": "./content-with-src.lnx",
+      "label": "Text Content Example with 'src' Attribute",
+      "href": "./text-content-with-src.lnx",
       "type": "application/lynx+json"
     },
     {
-      "label": "Content Example with 'data' Attribute",
-      "href": "./content-with-data.lnx",
+      "label": "Text Content Example with 'data' Attribute",
+      "href": "./text-content-with-data.lnx",
       "type": "application/lynx+json"
+    },
+    {
+      "label": "Image Content Example with 'src' Attribute",
+      "href": "./image-content-with-src.lnx",
+      "type": "image/jpeg"
     }
   ]
 }
