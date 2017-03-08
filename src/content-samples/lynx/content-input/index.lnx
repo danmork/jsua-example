@@ -15,8 +15,13 @@
       "type": "application/lynx+json"
     },
     {
-      "label": "Content Input with Initial Value",
-      "href": "./content-input-with-initial-value.lnx",
+      "label": "Content Input with Initial Embedded ('data') Value",
+      "href": "./content-input-with-initial-data-value.lnx",
+      "type": "application/lynx+json"
+    },
+    {
+      "label": "Content Input with Initial Remote ('src') Value",
+      "href": "./content-input-with-initial-src-value.lnx",
       "type": "application/lynx+json"
     }
   ]
