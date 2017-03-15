@@ -1,0 +1,46 @@
+{
+  "spec": {
+    "hints": [ "form" ],
+    "children": [
+      {
+        "name": "label",
+        "hints": [ "label", "text" ]
+      },
+      {
+        "name": "containerInput",
+        "hints": [ "container" ],
+        "input": {
+          "name": "containerInput"
+        },
+        "children": {
+          "hints": [ "text" ],
+          "input": {
+            "name": "containerInput"
+          }
+        }
+      },
+      {
+        "name": "submit",
+        "hints": [ "submit" ],
+        "children": [
+          {
+            "name": "label",
+            "hints": [ "label", "text" ]
+          }
+        ]
+      }
+    ]
+  },
+  "value": {
+    "label": "Container input",
+    "containerInput": [
+      "Input Value One",
+      "Input Value Two"
+    ],
+    "submit": {
+      "label": "Submit",
+      "action": "/echo",
+      "method": "POST"
+    }
+  }
+}

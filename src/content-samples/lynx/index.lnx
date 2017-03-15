@@ -30,6 +30,11 @@
       "type": "application/lynx+json"
     },
     {
+      "label": "Container Input Examples",
+      "href": "./container-input/",
+      "type": "application/lynx+json"
+    },
+    {
       "label": "Form Examples",
       "href": "./forms/",
       "type": "application/lynx+json"
