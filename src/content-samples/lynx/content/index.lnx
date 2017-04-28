@@ -23,6 +23,11 @@
       "label": "Image Content Example with 'src' Attribute",
       "href": "./image-content-with-src.lnx",
       "type": "image/jpeg"
+    },
+    {
+      "label": "Image Content Example with 'data' Attribute",
+      "href": "./image-content-with-data.lnx",
+      "type": "image/jpeg"
     }
   ]
 }

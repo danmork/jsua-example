@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf out && mkdir out",
-    "build": "npm run clean && babel node_modules/lynx-parser/src -d node_modules/lynx-parser/lib && babel node_modules/jsua-lynx/src -d node_modules/jsua-lynx/lib && babel node_modules/jsua/src -d node_modules/jsua/lib && browserify -r babel-polyfill -r jsua -r jsua/lib/views -r jsua-lynx -o ./out/bundle.js && cp -R ./src/* ./out",
+    "build": "npm run clean && babel node_modules/lynx-parser/src -d node_modules/lynx-parser/lib && babel node_modules/jsua-lynx/src -d node_modules/jsua-lynx/lib && babel node_modules/jsua/src -d node_modules/jsua/lib && browserify -r babel-polyfill -r jsua -r jsua-lynx -o ./out/bundle.js && cp -R ./src/* ./out",
     "start": "npm run build && npm run server",
     "server": "node server.js"
   },
