@@ -9,14 +9,10 @@
       {
         "name": "containerInput",
         "hints": [ "container" ],
-        "input": {
-          "name": "containerInput"
-        },
+        "input": "containerInput",
         "children": {
           "hints": [ "text" ],
-          "input": {
-            "name": "containerInput"
-          }
+          "input": "containerInput"
         }
       },
       {

@@ -1,6 +1,6 @@
 # jsua-example
 
-An example of how to use lynx-json/jsua to build an app.
+An example of how to use `@lynx-json/jsua` to build an app and how to register `@lynx-json/jsua-lynx` to render Lynx JSON documents.
 
 ## prerequisites
 

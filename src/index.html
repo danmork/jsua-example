@@ -1,38 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>JSUA Example</title>
-    <script src="url-search-params-polyfill.js" charset="utf-8"></script>
-    <script src="fetch-polyfill.js" charset="utf-8"></script>
-    <script src="matches-polyfill.js" charset="utf-8"></script>
-    <script src="bundle.js" charset="utf-8"></script>
-    <script src="config.js" charset="utf-8"></script>
   </head>
   <body>
     <div id="content">
       <span>Loading...</span>
     </div>
-    <script type="text/javascript">
-      function getCurrentLocation() {
-        return document.location.hash.substr(1);
-      }
-
-      function getStartingLocation() {
-        if (document.location.hash) {
-          return getCurrentLocation();
-        }
-
-        return "/content-samples/";
-      }
-
-      var jsua = require("jsua");
-
-      window.addEventListener("hashchange", function () {
-        jsua.fetch(document.location.origin + getCurrentLocation());
-      });
-
-      jsua.fetch(document.location.origin + getStartingLocation());
-    </script>
+    <script src="config.js" charset="utf-8"></script>
   </body>
 </html>

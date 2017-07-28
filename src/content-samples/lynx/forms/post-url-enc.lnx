@@ -9,9 +9,7 @@
       {
         "name": "firstName",
         "hints": [ "line", "text" ],
-        "input": {
-          "name": "firstName"
-        }
+        "input": "firstName"
       },
       {
         "name": "submit",

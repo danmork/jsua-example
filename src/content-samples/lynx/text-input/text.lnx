@@ -1,9 +1,7 @@
 {
   "spec": {
     "hints": [ "text" ],
-    "input": {
-      "name": "greeting"
-    }
+    "input": "greeting"
   },
   "value": "Text Input"
 }
