@@ -9,9 +9,7 @@
       {
         "name": "fileUpload",
         "hints": [ "content" ],
-        "input": {
-          "name": "fileUpload"
-        }
+        "input": "fileUpload"
       },
       {
         "name": "submit",
@@ -27,10 +25,7 @@
   },
   "value": {
     "label": "File upload",
-    "fileUpload": {
-      "data": "",
-      "type": "application/octet-stream"
-    },
+    "fileUpload": null,
     "submit": {
       "label": "Submit",
       "action": "/echo",

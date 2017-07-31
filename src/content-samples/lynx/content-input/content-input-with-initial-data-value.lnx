@@ -9,9 +9,7 @@
       {
         "name": "fileUpload",
         "hints": [ "content" ],
-        "input": {
-          "name": "fileUpload"
-        }
+        "input": "fileUpload"
       },
       {
         "name": "submit",
