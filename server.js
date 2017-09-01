@@ -20,8 +20,10 @@ var echoResponseBody = {
   }
 };
 
-express.static.mime.define({"application/lynx+json": ["lnx"]});
-express.static.mime.define({"application/lynx-spec+json": ["lnxs"]});
+express.static.mime.define({
+  "application/lynx+json": ["lnx"],
+  "application/lynx-spec+json": ["lnxs"]
+});
 
 function echo(req, res) {
   res.writeHead(200, { "content-type": "application/lynx+json" });
