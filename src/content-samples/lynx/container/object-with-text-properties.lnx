@@ -3,22 +3,117 @@
     "hints": [ "container" ],
     "children": [
       {
-        "name": "first",
+        "name": "a",
         "hints": [ "text" ]
       },
       {
-        "name": "second",
+        "name": "b",
         "hints": [ "text" ]
       },
       {
-        "name": "third",
+        "name": "c",
+        "hints": [ "text" ]
+      },
+      {
+        "name": "d",
+        "hints": [ "text" ]
+      },
+      {
+        "name": "e",
+        "hints": [ "text" ]
+      },
+      {
+        "name": "f",
+        "hints": [ "text" ]
+      },
+      {
+        "name": "g",
+        "hints": [ "text" ]
+      },
+      {
+        "name": "h",
+        "hints": [ "text" ]
+      },
+      {
+        "name": "i",
+        "hints": [ "text" ]
+      },
+      {
+        "name": "j",
+        "hints": [ "text" ]
+      },
+      {
+        "name": "k",
+        "hints": [ "text" ]
+      },
+      {
+        "name": "l",
+        "hints": [ "text" ]
+      },
+      {
+        "name": "m",
+        "hints": [ "text" ]
+      },
+      {
+        "name": "n",
+        "hints": [ "text" ]
+      },
+      {
+        "name": "o",
+        "hints": [ "text" ]
+      },
+      {
+        "name": "p",
+        "hints": [ "text" ]
+      },
+      {
+        "name": "q",
+        "hints": [ "text" ]
+      },
+      {
+        "name": "r",
+        "hints": [ "text" ]
+      },
+      {
+        "name": "s",
+        "hints": [ "text" ]
+      },
+      {
+        "name": "t",
+        "hints": [ "text" ]
+      },
+      {
+        "name": "u",
+        "hints": [ "text" ]
+      },
+      {
+        "name": "v",
         "hints": [ "text" ]
       }
     ]
   },
   "value": {
-    "first": "First property",
-    "second": "Second property",
-    "third": "Third property"
+    "a": "First property",
+    "b": "Second property",
+    "c": "Third property",
+    "d": "Third property",
+    "e": "Third property",
+    "f": "Third property",
+    "g": "Third property",
+    "h": "Third property",
+    "i": "Third property",
+    "j": "Third property",
+    "k": "Third property",
+    "l": "Third property",
+    "m": "Third property",
+    "n": "Third property",
+    "o": "Third property",
+    "p": "Third property",
+    "q": "Third property",
+    "r": "Third property",
+    "s": "Third property",
+    "t": "Third property",
+    "u": "Third property",
+    "v": "Third property"
   }
 }

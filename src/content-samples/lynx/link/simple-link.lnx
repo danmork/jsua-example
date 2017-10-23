@@ -6,8 +6,8 @@
     ]
   },
   "value": {
-    "label": "This is a link. Click to go back.",
-    "href": "./index.lnx",
+    "label": "This is a link. Select this text to go back.",
+    "href": ".",
     "type": "application/lynx+json"
   }
 }

@@ -15,6 +15,11 @@
       "type": "text/plain"
     },
     {
+      "label": "JPEG Image Example",
+      "href": "./image-jpeg.jpg",
+      "type": "image/jpeg"
+    },
+    {
       "label": "Lynx Examples",
       "href": "./lynx/",
       "type": "application/lynx+json"

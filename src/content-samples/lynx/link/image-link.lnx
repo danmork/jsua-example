@@ -1,0 +1,29 @@
+{
+  "spec": {
+    "hints": [ "container" ],
+    "children": [
+      { "name": "label", "hints": [ "text" ] },
+      { 
+        "name": "link", 
+        "hints": [ "link" ],
+        "children": [
+          { "name": "image", "hints": [ "image", "content" ]}    
+        ]
+      }
+    ]
+  },
+  "value": {
+    "label": "This is a link containing an image. Select the image to go back.",
+    "link": {
+      "image": {
+        "src": "/content-samples/image-jpeg.jpg",
+        "type": "image/jpeg",
+        "height": 200,
+        "width": 200,
+        "alt": "Bill Murray"
+      },
+      "href": ".",
+      "type": "application/lynx+json"  
+    }
+  }
+}

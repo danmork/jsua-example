@@ -15,6 +15,16 @@
       "type": "application/lynx+json"
     },
     {
+      "label": "Container Examples",
+      "href": "./container/",
+      "type": "application/lynx+json"
+    },
+    {
+      "label": "Content Examples",
+      "href": "./content/",
+      "type": "application/lynx+json"
+    },
+    {
       "label": "Text Input Examples",
       "href": "./text-input/",
       "type": "application/lynx+json"
@@ -25,33 +35,23 @@
       "type": "application/lynx+json"
     },
     {
-      "label": "Container Examples",
-      "href": "./container/",
-      "type": "application/lynx+json"
-    },
-    {
       "label": "Container Input Examples",
       "href": "./container-input/",
       "type": "application/lynx+json"
     },
     {
-      "label": "Form Examples",
-      "href": "./forms/",
-      "type": "application/lynx+json"
-    },
-    {
-      "label": "Content Examples",
-      "href": "./content/",
-      "type": "application/lynx+json"
-    },
-    {
-      "label": "Link Example",
-      "href": "./link.lnx",
+      "label": "Link Examples",
+      "href": "./link/",
       "type": "application/lynx+json"
     },
     {
       "label": "Submit Example",
       "href": "./submit.lnx",
+      "type": "application/lynx+json"
+    },
+    {
+      "label": "Form Examples",
+      "href": "./forms/",
       "type": "application/lynx+json"
     }
   ]
